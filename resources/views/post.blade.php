@@ -22,6 +22,7 @@
                 <th>Id</th>
                 <th>Post</th>
                 <th>Like</th>
+                <th>Like ID</th>
               </tr>
             </thead>
             <tbody>
@@ -30,8 +31,13 @@
                 <td>{{ $data->id}}</td>
                 <td>{{ $data->name}}</td>
                 <td>
-                @foreach( $data->like as $coms)
-                    {{ $coms->name}},
+                @foreach( $data->like as $likes)
+                    {{ $likes->name}},
+                @endforeach
+                </td>
+                <td>
+                @foreach( $data->like as $likes)
+                    {{ $likes->id}},
                 @endforeach
                 </td>
                 <td></td>

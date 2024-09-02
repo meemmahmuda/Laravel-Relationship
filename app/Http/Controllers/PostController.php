@@ -10,6 +10,7 @@ class PostController extends Controller
 {
     public function index (){
     $post = Post::with('like')->get();
+    // dd($post);
     return view('post', compact('post'));
 }
 }
