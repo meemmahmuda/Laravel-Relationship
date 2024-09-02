@@ -10,7 +10,7 @@ class City extends Model
     use HasFactory;
 
 
-    public function state()
+    public function tate()
     {
         return $this->belongsTo(State::class);
     }
