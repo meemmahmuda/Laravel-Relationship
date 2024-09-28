@@ -11,6 +11,7 @@ class PostController extends Controller
     public function index (){
     $post = Post::with('like')->get();
     // dd($post);
+    // return response()->json($post);
     return view('post', compact('post'));
 }
 }

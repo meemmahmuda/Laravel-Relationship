@@ -11,6 +11,7 @@ class UserController extends Controller
     public function index () {
     $role =Role::with('user')->get();
     // dd($users);
+    // return response()->json($role);
     return view('user', compact('role'));
     }
 }
